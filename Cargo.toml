@@ -1,0 +1,7 @@
+[package]
+name = "code_ninjas"
+version = "0.1.0"
+authors = ["serge"]
+edition = "2018"
+
+[dependencies]
