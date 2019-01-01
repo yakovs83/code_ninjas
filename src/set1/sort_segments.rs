@@ -20,7 +20,6 @@ pub fn solve(segments: &Vec<Segment>) -> Option<Vec<Segment>> {
         let mut left_m: HashMap<i64, Segment> =
             seg_tail_iter.clone().map(|&(l, r)| (l, (l, r))).collect();
         let mut right_m: HashMap<i64, Segment> = seg_tail_iter.map(|&(l, r)| (r, (l, r))).collect();
-        println!("Initially result is {:?}", result);
         loop {
             let right_op = right_m.remove(&cur_left).map(|left_add| {
                 result.push_front(left_add);
@@ -59,7 +58,7 @@ mod tests {
         } else {
             input
                 .iter()
-                .chain(input.iter())
+                .cycle()
                 .skip_while(|x| *x != start)
                 .take(input.len())
                 .cloned()

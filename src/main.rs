@@ -1,7 +1,8 @@
 fn main() {
-    use code_ninjas::set1::sort_segments::solve;
-    let input = vec![(3, 5), (1, 3), (5, 1)]; //simple loop
-                                              //let input = vec![(4, 5), (9, 4), (5, 1), (11, 9)]; //simple continuous path
-    let res = solve(&input);
+    use code_ninjas::set1::better_view::solve;
+    let in1 = vec![3, 4, 5, 4, 6];
+    let in2 = vec![3, 4, 5, 4];
+    let in3 = vec![3, 4, 6, 4, 5];
+    let res = solve(&in1);
     println!("{:?}", res);
 }
